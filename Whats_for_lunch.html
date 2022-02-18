@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="whats_for_lunch.css">
+</head>
+<body>
+    <div class="header">
+        <div id="result" class="result">What should I eat?</div>
+        <div class="button">
+            <button onclick="getLunch()">You should get...</button>
+        </div>
+    </div>
+    <div class="options">
+        <div>
+            <select id="pickListToAdd">
+                <option value="R">Restaurant</option>
+                <option value="F">Fast food</option>
+    
+                <option value="T">Temporary List</option>
+            </select>
+            <input id="nameInput"></input>
+            <button onclick="addToList()">Add to list</button>
+        </div>
+        <div>
+            <button onclick="editLists()">Edit lists</button>
+            <button onclick="resetLocalStorage()">Reset to default</button>
+        </div>
+    </div>
+    <div class="mainArea">
+        <div class="list">
+            <div class="list_top">
+                <div class="list_title">Restaurants</div>
+            </div>
+            <div id="R" class="list_items_F"></div>
+        </div>
+        <div class="list">
+            <div class="list_top">
+                <div class="list_title">Fast food</div>
+            </div>
+            <div id="F" class="list_items_F"></div>
+        </div>
+        <div class="list">
+            <div class="list_top">
+                <div class="list_title" title="everything in here is deleted when you leave or refresh the page">Temporary List</div>
+               
+            </div>
+            <div id="T" class="list_items_F"></div>
+        </div>
+
+    </div>
+</body>
+<script src="Whats_for_lunch.js"></script>
+</html>
