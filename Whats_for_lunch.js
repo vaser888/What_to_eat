@@ -59,13 +59,18 @@ function createListItem(name, Id){
 }
 
 function addToList(){
+    event.preventDefault();
     var a = document.getElementById("nameInput").value;
     var b = document.getElementById("pickListToAdd").value;
+    if (a === ""){
+        return
+    }
     var g = checkForDuplicate(a);
     if (g == true){
         createListItem(a,b);
         saveListsToLocalStorage();
     }
+    document.getElementById("nameInput").value= "";
 }
 
 function checkForDuplicate(name){
